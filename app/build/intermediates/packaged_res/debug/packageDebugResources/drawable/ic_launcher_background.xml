@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Luminous Blur / Soft Blue Gradient Background -->
+    <path android:pathData="M0,0h108v108h-108z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="12"
+                android:startY="8"
+                android:endX="96"
+                android:endY="100">
+                <item android:offset="0.0" android:color="#66B2FF" />
+                <item android:offset="0.52" android:color="#2E86F7" />
+                <item android:offset="1.0" android:color="#1967D2" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <!-- Soft Ambient Glass Glow Circle Top-Left -->
+    <path
+        android:pathData="M24,24m-28,0a28,28 0,1 1,56 0a28,28 0,1 1,-56 0"
+        android:fillColor="#33FFFFFF" />
+    <!-- Soft Frosted Inner Squircle Card -->
+    <path
+        android:pathData="M24,18 L84,18 Q90,18 90,24 L90,84 Q90,90 84,90 L24,90 Q18,90 18,84 L18,24 Q18,18 24,18 Z"
+        android:fillColor="#26FFFFFF"
+        android:strokeColor="#4DFFFFFF"
+        android:strokeWidth="1.2" />
+</vector>

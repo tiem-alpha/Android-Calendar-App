@@ -1,0 +1,7 @@
+com.oneui.calendar.app-updated_navigation_xml-0 D:\Project\Calander\app\build\generated\updated_navigation_xml\debug
+com.oneui.calendar.app-packageDebugResources-1 D:\Project\Calander\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.oneui.calendar.app-packageDebugResources-2 D:\Project\Calander\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.oneui.calendar.app-debug-3 D:\Project\Calander\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.oneui.calendar.app-debug-4 D:\Project\Calander\app\src\debug\res
+com.oneui.calendar.app-main-5 D:\Project\Calander\app\src\main\res
+gradleHome-0 C:\Users\nguye\.gradle
