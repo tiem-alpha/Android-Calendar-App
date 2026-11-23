@@ -1,25 +1,24 @@
-# Calender — Samsung One UI Android Calendar & MCP Server
+# Calender — Modern Android Calendar & MCP Server
 
-A modern, offline-first **Android Calendar & Reminder** application crafted with **Jetpack Compose** and **Samsung One UI Design System (One UI 6/7/8)**, featuring **Astronomical Lunar Calendar**, **Global Holidays**, **Real-time NLP Conflict Detection**, **Date Calculator**, **Multi-language Support (English / Tiếng Việt / 中文)**, and an **Embedded Model Context Protocol (MCP) Server** for AI Agent integration.
+A modern, offline-first **Android Calendar & Reminder** application built with **Kotlin** and **Jetpack Compose**, featuring **Astronomical Lunar Calendar**, **Global Public Holidays**, **Real-time NLP Conflict Detection**, **Jump to Date & Date Calculator**, **Multi-language Support (English / Tiếng Việt / 中文)**, and an **Embedded Model Context Protocol (MCP) Server** for AI Agent integration.
 
 ---
 
 ## Key Features
 
-### 1. Ergonomic Samsung One UI Experience
-- **5 Calendar Views:**
-  - **Expanded Month View & Split Month Agenda:** Smooth spring-physics morphing between full-screen month grid (with continuous multi-day pastel ribbons) and split agenda panel with Lunar date & Open-Meteo weather forecast.
-  - **Day Detail Popup Carousel:** Floating `26dp` squircle cards in a `HorizontalPager` with adjacent days peeking from both edges.
-  - **Week & Day Timeline Views:** 24-hour scrollable grid with live red current-time indicator (`►────`), all-day pastel banners, overlap column packing, and `+N` cluster badges.
-  - **Year Overview:** 3×4 mini-month grid with event indicator dots.
-  - **Reminder Manager:** One UI Expandable Collapsible Toolbar, D-Day filter, and long-press Multi-Select mode.
-- **One-Handed Quick Add & Back-to-Today:** Bottom-anchored quick-add pill + elevated FAB (`+`) and floating **Back to Today** pill whenever browsing other dates.
-- **Light Soft Pastel & OLED Dark Mode (`#000000`):** Ambient Pastel Glow headers and high-contrast OLED dark surfaces.
+### 1. Ergonomic One-Handed Design & 5 Calendar Views
+- **Expanded Month View & Split Month Agenda:** Smooth spring-physics morphing between a full-screen month grid (with continuous multi-day pastel ribbons) and a split agenda panel showing Lunar dates & Open-Meteo weather forecasts.
+- **Day Detail Popup Carousel:** Floating rounded cards in a `HorizontalPager` with adjacent days peeking from both edges for rapid day-to-day browsing.
+- **Week & Day Timeline Views:** 24-hour scrollable time grid with a live red current-time indicator (`►────`), all-day pastel banners, overlap column packing, and `+N` cluster badges.
+- **Year Overview:** 3×4 mini-month grid with event indicator dots for quick annual navigation.
+- **Reminder Manager:** Collapsible header, D-Day countdown filter, and long-press Multi-Select mode.
+- **Quick Add & Back-to-Today:** Bottom-anchored quick-add pill + elevated FAB (`+`) and a floating **Back to Today** pill whenever browsing other dates.
+- **Light Soft Pastel & Pure OLED Dark Mode (`#000000`):** Ambient Pastel Glow headers and high-contrast OLED dark surfaces.
 
 ### 2. Smart Productivity & Localization
 - **Smart NLP & Schedule Conflict Warning:** Automatically extracts times from natural language titles (e.g. `"3pm Movie"` $\rightarrow$ `3:00PM ~ 4:00PM`), previews conflicting events in real time, and prompts a confirmation dialog before saving overlapping schedules.
-- **Astronomical Lunar Calendar (100% Offline):** Ho Ngoc Duc / Jean Meeus algorithm displaying mini lunar dates directly inside calendar cells and supporting lunar recurring events.
-- **Global Public Holidays:** Automatically highlights Saturdays, Sundays, and country-specific holidays in red based on selected language (**Vietnam**, **China**, **US/UK**).
+- **Astronomical Lunar Calendar (100% Offline):** Built-in astronomical engine displaying mini lunar dates directly inside calendar cells and supporting lunar recurring events.
+- **Global Public Holidays:** Automatically highlights Saturdays, Sundays, and country-specific holidays in red based on the selected language (**Vietnam**, **China**, **US/UK**).
 - **Jump to Date & Date Calculator:** Jump directly to any date and calculate exact duration (total days, weeks, remaining days, approximate months) between any start and end date.
 - **Multi-Filter Search with Multi-Select:** Full-text search (`SQLite FTS4`), voice search, recent search chips, Sticker & Color filters, plus long-press Multi-Select (`Select all`, `Deactivate`, `Delete`).
 - **Multi-Language & Persistent Settings:** Instant switching between **English**, **Tiếng Việt**, and **中文**, with Time Zone, Lunar Calendar, Global Holidays, Weather City, and Theme persisted via `SharedPreferences`.
@@ -46,7 +45,7 @@ adb forward tcp:8765 tcp:8765
 
 ## Tech Stack & Architecture
 
-- **Language & UI:** Kotlin `2.2.10`, Jetpack Compose (`BOM 2024.10.01`), Material 3 + Custom One UI Design System
+- **Language & UI:** Kotlin `2.2.10`, Jetpack Compose (`BOM 2024.10.01`), Material 3
 - **Build System:** Gradle `9.5.0`, Android Gradle Plugin `9.3.3` (Built-in Kotlin), Compile/Target SDK `35`, Min SDK `26`
 - **Storage & Search:** Offline-first `SQLiteOpenHelper` + `FTS4` Virtual Table + Reactive `StateFlow`
 - **Sync & Weather:** Two-way Android `CalendarContract` sync + `Open-Meteo API` (16-day forecast, no API key required)
@@ -57,7 +56,7 @@ adb forward tcp:8765 tcp:8765
 app/src/main/java/com/oneui/calendar/
 ├── core/
 │   ├── common/          # AppLocalization, LunarCalendarConverter, HolidayProvider, RRuleEvaluator, NLP & Slot Engines
-│   ├── designsystem/    # OneUiTheme (Light Pastel / OLED Dark) & OneUiCommonComponents
+│   ├── designsystem/    # Custom Soft Pastel Light / OLED Dark Theme & Reusable Components
 │   ├── mcp/             # CalendarMcpServer (JSON-RPC 2.0 over HTTP :8765)
 │   └── notifications/   # ExactAlarmScheduler & AlarmReceiver
 ├── data/                # CalendarDatabaseHelper (SQLite+FTS4), OpenMeteoWeatherService, SystemCalendarSyncManager
@@ -77,4 +76,4 @@ app/src/main/java/com/oneui/calendar/
 ```
 
 ### Download Pre-built APK
-Grab the latest APK directly from the [GitHub Releases](https://github.com/tiem-alpha/Android-Calendar-App/releases) page.
+Grab the latest release APK directly from `releases/Calender-v1.0.0-release.apk` or the [GitHub Releases](https://github.com/tiem-alpha/Android-Calendar-App/releases) page.
